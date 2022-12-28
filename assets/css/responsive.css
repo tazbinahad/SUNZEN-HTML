@@ -3,7 +3,7 @@
 /*--------------------------------------------------------------------------------------------------
                                Extra Large Desktops :1400px.= xxl
 ---------------------------------------------------------------------------------------------------*/
-@media (min-width: 1400px) and (max-width: 1800px) {
+@media (min-width: 1400px) and (max-width: 2000px) {
 
 
 
@@ -43,9 +43,40 @@
                                Medium Devices Tablets :768px.= md
 ---------------------------------------------------------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-	
+	.main-menu ul li{
+		margin-right: 25px;
+	}
+	.main-menu ul li:last-child{
+		margin-right: 0;
+	}
 
-	
+	.main-menu ul li a{
+		font-size: 16px;
+	}
+	.slider-content h2 {
+		font-size: 32px;
+	}
+	.service-content p{
+		font-size: 14px;
+	}
+	.single-service h4 {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+	.about-us p {
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 28px;
+	}
+	.icon ul li img {
+		width: 50%;
+	}
+	.icon ul li {
+		margin: 0 10px;
+		padding: 0;
+		width: 100px;
+	}
 
 
 
@@ -58,7 +89,44 @@
 ---------------------------------------------------------------------------------------------------*/
 @media (max-width: 767.98px) {
 
-	
+	.header-area {
+		height: 100px;
+	}
+	.logo img {
+		margin-top: 0;
+	}
+	.slider-content h2 {
+		font-size: 24px;
+		line-height: 40px;
+	}
+	.section-title h3 {
+		font-size: 42px;
+	}
+	.services-area .section-title p {
+
+		line-height: 28px;
+		font-size: 16px;
+	}
+	.service-content p{
+		font-size: 14px;
+	}
+	.single-service h4 {
+		font-size: 24px;
+		margin-bottom: 5px;
+	}
+	.about-us p {
+		font-size: 14px;
+		line-height: 25px;
+	}
+	.about-us .section-title h3::before {
+		width: 205px;
+
+	}
+	.icon ul li {
+		margin: 0 5px;
+		padding: 0;
+		width: 100px;
+	}
 	
 	
 

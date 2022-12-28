@@ -32,12 +32,13 @@ font-family: 'Inter', sans-serif;
 ---------------------------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=Inter:wght@400;500;600;700&display=swap');
 
-body {
+body,
+html {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   line-height: 28px;
   color: #000000;
-  background-color: #ddd;
+
 }
 
 a {
@@ -91,11 +92,15 @@ ul {
   text-align: center;
   font-family: 'Cousine';
   font-weight: 400;
-  font-size: 64px;
+  font-size: 54px;
   text-transform: uppercase;
   color: #DBA833;
   position: relative;
 }
+
+/* Bootstrap Modufy */
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {}
 
 /*.section-title h3::before{
   position: absolute;
@@ -111,16 +116,13 @@ ul {
 ---------------------------------------------------------------------------------------------------*/
 .header-area {
   background-color: #1D1F1C;
-
 }
 
 .logo img {
   height: 100px;
   padding: 10px 10px;
-  margin-top: 3px;
+  margin-top: 1px;
 }
-
-.main-menu {}
 
 .main-menu ul {
   margin: 0;
@@ -134,7 +136,7 @@ ul {
 
 .main-menu ul li a {
   display: block;
-  padding: 40px 10px;
+  padding: 36px 10px;
   text-transform: capitalize;
   font-weight: 500;
   font-size: 18px;
@@ -142,6 +144,21 @@ ul {
   color: #ffffff;
 }
 
+.main-menu ul li a:not([href]):not([class]) {
+  color: #fff;
+}
+
+.main-menu ul li a:not([href]):not([class]):hover {
+  color: #DCA733;
+}
+
+.main-menu ul li a:hover,
+.main-menu ul li.current a,
+.main-menu ul li a.active {
+  color: #DCA733;
+}
+
+.main-menu ul li a.active::before,
 .main-menu ul li a::before {
   position: absolute;
   content: "";
@@ -154,8 +171,19 @@ ul {
   transition: .4s;
 }
 
+.main-menu ul li a.active::before,
 .main-menu ul li:hover a::before {
   transform: scaleX(1);
+}
+
+/*====== Sticky-Header ======*/
+.header-area.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transition: .4s;
 }
 
 /*--------------------------------------------------------------------------------------------------
@@ -235,18 +263,19 @@ ul {
 ---------------------------------------------------------------------------------------------------*/
 .services-area {
   background-color: #ffffff;
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 80px;
+  height: 100%vh;
 }
 
 .services-area .section-title p {
   font-family: 'Inter';
   font-weight: 400;
-  font-size: 19px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 32px;
   color: #000000;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .service-menu {
@@ -254,18 +283,16 @@ ul {
 }
 
 .service-menu ul li {
-  margin-bottom: 22px;
+  margin-bottom: 12px;
 }
-
-
 
 .service-menu ul li a {
   display: inline-block;
   font-family: 'Cousine';
   color: #000000;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .service-menu ul li a.active,
@@ -298,19 +325,17 @@ ul {
   text-transform: uppercase;
 }
 
-
-
 /*--------------------------------------------------------------------------------------------------
                                       5. About Us-Area CSS
 ---------------------------------------------------------------------------------------------------*/
 .about-us {
   background-color: #000000;
-  padding-top: 80px;
-  padding-bottom: 140px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 .about-us .section-title h3 {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: #ffffff;
   position: relative;
 }
@@ -320,7 +345,7 @@ ul {
   content: "";
   background-color: #DBA833;
   height: 2px;
-  width: 315px;
+  width: 265px;
   bottom: 0;
 }
 
@@ -331,27 +356,19 @@ ul {
   font-weight: 500;
   font-size: 16px;
   line-height: 32px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   display: block;
-
 }
 
 .icon ul {}
 
 .icon ul li {
   display: inline-block;
-  margin: 0 90px;
+  margin: 0 15px;
 }
 
-.icon ul li i {
-  color: #fff;
-  font-size: 40px;
-  border: 4px solid #fff;
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
-  border-radius: 50%;
-
+.icon ul li img {
+  width: 40%;
 }
 
 /*--------------------------------------------------------------------------------------------------
@@ -359,51 +376,29 @@ ul {
 ---------------------------------------------------------------------------------------------------*/
 .contact-area {
   background-color: #ffffff;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .contact-area .section-title {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
-.contact-address {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.contact-address i {
-  background-color: #DCA733;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  color: #ffffff;
-  border-radius: 50%;
-}
-
-.contact-address h4 {
-  text-transform: capitalize;
-  font-weight: 500;
-  margin-top: 15px;
-  font-size: 20px;
-}
-
-.contact-address h4 span {
-  display: block;
+.contact-form h4 {
+  font-family: 'Cousine';
   font-weight: 400;
-  font-size: 16px;
-  margin-top: 5px;
-  text-transform: none;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 .contact-form input,
 textarea {
   width: 100%;
-  border: 1px solid #333;
-  padding: 5px 10px;
-  margin-bottom: 10px;
+  padding: 5px 15px;
+  margin-bottom: 5px;
   border: 0;
   background-color: #ddd;
+  outline: none;
 }
 
 .contact-form input[type="submit"] {
@@ -412,12 +407,26 @@ textarea {
   color: #ffffff;
   padding: 10px;
   font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.contact-details h4 {
+  font-family: 'Cousine';
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.contact-details span {
+  display: block;
+  font-family: 'Cousine';
+  font-weight: 400;
+  font-size: 18px;
 }
 
 /*--------------------------------------------------------------------------------------------------
                                       7. Footer-Area CSS
 ---------------------------------------------------------------------------------------------------*/
-
 .footer-area {
   padding: 50px 0;
   background-color: #171A21;

@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
     <!-- Slick CSS -->
     <link rel="stylesheet" href="assets/css/slick.css" />
+    <!-- Mobile-menu CSS -->
+    <link rel="stylesheet" href="assets/css/meanmenu.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- Responsive CSS -->
@@ -23,24 +25,33 @@
     <header class="header-area">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 col-md-2">
             <div class="logo">
               <a href="index.html"
                 ><img src="assets/images/logo.png" alt="LOGO"
               /></a>
             </div>
           </div>
-          <div class="col-lg-9">
+          <div class="col-lg-9 col-md-10">
             <div class="main-menu text-end">
-              <nav>
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">about us</a></li>
-                  <li><a href="#">contact us</a></li>
+              <nav id="mobile-menu-active">
+                <ul id="nav">
+                  <li>
+                    <a onclick="scrollToDiv(this,'home')">Home</a>
+                  </li>
+                  <li>
+                    <a onclick="scrollToDiv(this,'services')">services</a>
+                  </li>
+                  <li>
+                    <a onclick="scrollToDiv(this,'about_us')">about us</a>
+                  </li>
+                  <li>
+                    <a onclick="scrollToDiv(this,'contact_us')">contact us</a>
+                  </li>
                 </ul>
               </nav>
             </div>
+            <div class="mobile-menu"></div>
           </div>
         </div>
       </div>
@@ -48,7 +59,7 @@
     <!-- ================================ Header-Area End ================================ -->
     <main>
       <!-- ================================ Slider-Area Start ================================ -->
-      <section class="slider-area">
+      <section class="slider-area" id="home">
         <div class="slider-active">
           <div
             class="single-slider"
@@ -97,7 +108,7 @@
       <!-- ================================ Slider-Area End ================================ -->
 
       <!-- ================================ Services-Area Start ================================ -->
-      <section class="services-area">
+      <section class="services-area" id="services">
         <div class="container">
           <div class="section-title">
             <h3>Our Services</h3>
@@ -128,73 +139,83 @@
                       </p>
                     </div>
                     <div class="single-service" name="two">
-                      <h4>Construction Security (2)</h4>
+                      <h4>Corporate security</h4>
                       <p>
-                        Construction sites can be vulnerable to theft,
-                        vandalism, and trespassing, which can lead to costly
-                        delays and damage to property. That's where our company
-                        comes in. We specialize in providing top-notch security
-                        patrol services to construction sites, ensuring that
-                        your project stays on track and your assets are
-                        protected. Our team of highly-trained and experienced
-                        security officers are equipped to handle any situation
-                        that may arise.
+                        Corporate security is essential for protecting a
+                        company's assets, employees, and reputation. Our company
+                        specializes in providing top-quality security services
+                        to businesses of all sizes. Our team of highly trained
+                        and experienced security professionals is equipped to
+                        handle any situation that may arise, from safeguarding
+                        company property to responding to emergency situations.
+                        We also offer a range of customizable security solutions
+                        to meet the specific needs of each business, including
+                        security patrols, access control, and surveillance.
                       </p>
                     </div>
                     <div class="single-service" name="three">
-                      <h4>Construction Security (3)</h4>
+                      <h4>Event Security</h4>
                       <p>
-                        Construction sites can be vulnerable to theft,
-                        vandalism, and trespassing, which can lead to costly
-                        delays and damage to property. That's where our company
-                        comes in. We specialize in providing top-notch security
-                        patrol services to construction sites, ensuring that
-                        your project stays on track and your assets are
-                        protected. Our team of highly-trained and experienced
-                        security officers are equipped to handle any situation
-                        that may arise.
+                        Ensuring the safety and security of your event is
+                        crucial to its success. Whether it's a concert,
+                        festival, or corporate function, our company has the
+                        expertise to provide top-notch event security services.
+                        Our team of highly trained and professional security
+                        officers are equipped to handle any situation that may
+                        arise, ensuring that your event runs smoothly and your
+                        guests feel safe. We take pride in our attention to
+                        detail and our ability to customize our security plans
+                        to meet the specific needs of each event.
                       </p>
                     </div>
                     <div class="single-service" name="four">
-                      <h4>Construction Security (4)</h4>
+                      <h4>Hotel Security</h4>
                       <p>
-                        Construction sites can be vulnerable to theft,
-                        vandalism, and trespassing, which can lead to costly
-                        delays and damage to property. That's where our company
-                        comes in. We specialize in providing top-notch security
-                        patrol services to construction sites, ensuring that
-                        your project stays on track and your assets are
-                        protected. Our team of highly-trained and experienced
-                        security officers are equipped to handle any situation
-                        that may arise.
+                        Hotel security is essential for ensuring the safety and
+                        security of guests and staff. In today's world, hotels
+                        are often targeted by thieves, vandals, and other
+                        individuals with nefarious intentions. That's why it's
+                        important to have a professional security team in place
+                        to protect your hotel and its assets. At our company, we
+                        understand the importance of hotel security and have a
+                        team of well-trained and supported security staff to
+                        provide the highest level of protection. Our team is
+                        equipped to handle any situation that may arise, and we
+                        offer a range of customizable security solutions to meet
+                        the specific needs of each hotel.
                       </p>
                     </div>
                     <div class="single-service" name="five">
-                      <h4>Construction Security (5)</h4>
+                      <h4>Student and supported housing accommodation</h4>
                       <p>
-                        Construction sites can be vulnerable to theft,
-                        vandalism, and trespassing, which can lead to costly
-                        delays and damage to property. That's where our company
-                        comes in. We specialize in providing top-notch security
-                        patrol services to construction sites, ensuring that
-                        your project stays on track and your assets are
-                        protected. Our team of highly-trained and experienced
-                        security officers are equipped to handle any situation
-                        that may arise.
+                        Security is crucial for the protection of residents and
+                        staff in student and supported housing. At our company,
+                        we understand the specific security needs of these types
+                        of housing and have a team of highly trained and
+                        supported security professionals to provide the best
+                        protection possible. From handling emergency situations
+                        to customizing security solutions, our team is equipped
+                        to meet the unique needs of each housing complex. If you
+                        require reliable security for your student or supported
+                        housing, our company is the perfect fit. We have the
+                        expertise and resources to keep your residents safe and
+                        secure.
                       </p>
                     </div>
                     <div class="single-service" name="six">
-                      <h4>Construction Security (6)</h4>
+                      <h4>Industrial and warehouse security</h4>
                       <p>
-                        Construction sites can be vulnerable to theft,
-                        vandalism, and trespassing, which can lead to costly
-                        delays and damage to property. That's where our company
-                        comes in. We specialize in providing top-notch security
-                        patrol services to construction sites, ensuring that
-                        your project stays on track and your assets are
-                        protected. Our team of highly-trained and experienced
-                        security officers are equipped to handle any situation
-                        that may arise.
+                        The protection of a company's assets and employees is
+                        crucial in industrial and warehouse settings. At our
+                        company, we have a team of highly trained and supported
+                        security professionals who understand the unique
+                        security needs of these types of facilities. From
+                        customizing security solutions to handling emergencies,
+                        our team is equipped to meet the specific needs of each
+                        warehouse and industrial facility. If you require
+                        reliable security for your industrial or warehouse
+                        property, look no further. Our company has the expertise
+                        and resources to keep your facility safe and secure.
                       </p>
                     </div>
                   </li>
@@ -259,7 +280,7 @@
       <!-- ================================ Services-Area End ================================ -->
 
       <!-- ================================ About Us-Area Start ================================ -->
-      <section class="about-us">
+      <section class="about-us" id="about_us">
         <div class="container">
           <div class="section-title">
             <h3>About Us</h3>
@@ -284,9 +305,9 @@
                 </p>
                 <div class="icon text-center">
                   <ul>
-                    <li><i class="fa-solid fa-umbrella"></i></li>
-                    <li><i class="fa-solid fa-binoculars"></i></li>
-                    <li><i class="fa-solid fa-lock"></i></li>
+                    <li><img src="assets/images/about1.svg" alt="" /></li>
+                    <li><img src="assets/images/about2.svg" alt="" /></li>
+                    <li><img src="assets/images/about3.svg" alt="" /></li>
                   </ul>
                 </div>
               </div>
@@ -297,25 +318,35 @@
       <!-- ================================ About Us-Area End ================================ -->
 
       <!-- ================================ Contact Us-Area Start ================================ -->
-      <section class="contact-area">
+      <section class="contact-area" id="contact_us">
         <div class="container">
           <div class="section-title">
             <h3>Contact Us</h3>
           </div>
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
               <div class="contact-form">
                 <h4>Enquiries</h4>
                 <form action="">
-                  <input type="text" placeholder="Name" />
-                  <input type="email" placeholder="Email" />
-                  <input type="text" placeholder="Subject" />
-                  <textarea placeholder="Message"></textarea>
+                  <label for="name">Name :</label>
+                  <input type="text" />
+                  <label for="email">Email :</label>
+                  <input type="email" />
+                  <label for="subject">Subject :</label>
+                  <input type="text" />
+                  <label for="message">Message :</label>
+                  <textarea></textarea>
                   <input type="submit" value="Send Message" />
                 </form>
               </div>
             </div>
-            <div class="col-lg-4"></div>
+            <div class="col-lg-5">
+              <div class="contact-details text-center">
+                <h4>Contact Details</h4>
+                <span>Email: enquiry@sanzengo.com</span>
+                <span>Mobile: 07534762656</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -352,6 +383,10 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Slick-Slider JS -->
     <script src="assets/js/slick.min.js"></script>
+    <!-- One Page Nav JS -->
+    <script src="assets/js/jquery.nav.js"></script>
+    <!-- Mobile Menu JS -->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
   </body>
